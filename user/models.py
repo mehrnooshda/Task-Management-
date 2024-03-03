@@ -11,7 +11,7 @@ class Avatar(models.Model):
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     avatar = models.ForeignKey(Avatar, on_delete=models.CASCADE, null=True)
-    points = models.IntegerField(default=0)
+    points = models.PositiveIntegerField(default=0)
 
     # @property
     # def get_username(self):
